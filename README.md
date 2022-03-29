@@ -24,6 +24,10 @@ start your mysql container:
 Then apply the config file: 
 ```mysql -u root guacamole_db -p < initdb.sql```
 
+this file should be in the init folder but if you wanted to generate it yourself:
+```docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql```
+
+
 You can now load the whole stack
 ```docker-compose up -d```
 ~~~
