@@ -13,10 +13,19 @@ You need a working **docker** installation and **docker-compose** running on you
 Clone the GIT repository and start guacamole:
 
 ~~~bash
-git clone "https://github.com/boschkundendienst/guacamole-docker-compose.git"
+git clone "https://github.com/youda313/guacamole-docker-compose"
 cd guacamole-docker-compose
-./prepare.sh
-docker-compose up -d
+./prepare_mysql.sh
+
+Create an external network ```docker network create internal_labs || true```
+
+start your mysql container:
+```docker-compose -f docker-compose.yml start mysql```
+Then apply the config file: 
+```mysql -u root guacamole_db -p < initdb.sql```
+
+You can now load the whole stack
+```docker-compose up -d```
 ~~~
 
 Your guacamole server should now be available at `https://ip of your server:8443/`. The default username is `guacadmin` with password `guacadmin`.
