@@ -12,10 +12,10 @@ You need a working **docker** installation and **docker-compose** running on you
 ## Quick start
 Clone the GIT repository and start guacamole:
 
-~~~bash
-git clone "https://github.com/youda313/guacamole-docker-compose"
+
+'''git clone "https://github.com/youda313/guacamole-docker-compose"
 cd guacamole-docker-compose
-./prepare_mysql.sh
+./prepare_mysql.sh'''
 
 Create an external network 
 '''docker network create internal_labs || true'''
@@ -31,7 +31,7 @@ this file should be in the init folder but if you wanted to generate it yourself
 
 You can now load the whole stack
 '''docker-compose up -d'''
-~~~
+
 
 Your guacamole server should now be available at `https://ip of your server:8443/`. The default username is `guacadmin` with password `guacadmin`.
 
