@@ -13,9 +13,9 @@ You need a working **docker** installation and **docker-compose** running on you
 Clone the GIT repository and start guacamole:
 
 
-'''git clone "https://github.com/youda313/guacamole-docker-compose"
+```git clone "https://github.com/youda313/guacamole-docker-compose"
 cd guacamole-docker-compose
-./prepare_mysql.sh'''
+./prepare_mysql.sh```
 
 Create an external network 
 '''docker network create internal_labs || true'''
