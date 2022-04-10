@@ -21,7 +21,7 @@ cd guacamole-docker-compose
 
 Create an external network 
 ```
-docker network create internal_labs || true
+docker network create guacamoledockercompose_internal_labs || true
 ```
 
 start your mysql container:
