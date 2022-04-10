@@ -17,19 +17,20 @@ git clone "https://github.com/youda313/guacamole-docker-compose"
 cd guacamole-docker-compose
 ./prepare_mysql.sh
 
-Create an external network ```docker network create internal_labs || true```
+Create an external network 
+'''docker network create internal_labs || true'''
 
 start your mysql container:
-```docker-compose -f docker-compose.yml start mysql```
+'''docker-compose -f docker-compose.yml start mysql'''
 Then apply the config file: 
-```mysql -u root guacamole_db -p < initdb.sql```
+'''mysql -u root guacamole_db -p < initdb.sql'''
 
 this file should be in the init folder but if you wanted to generate it yourself:
-```docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql```
+'''docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql'''
 
 
 You can now load the whole stack
-```docker-compose up -d```
+'''docker-compose up -d'''
 ~~~
 
 Your guacamole server should now be available at `https://ip of your server:8443/`. The default username is `guacadmin` with password `guacadmin`.
