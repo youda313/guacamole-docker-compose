@@ -16,6 +16,7 @@ Clone the GIT repository and start guacamole:
 ```
 git clone "https://github.com/youda313/guacamole-docker-compose"
 cd guacamole-docker-compose
+chmod +x ./prepare_mysql.sh
 ./prepare_mysql.sh
 ```
 
